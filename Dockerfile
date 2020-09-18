@@ -31,5 +31,8 @@ RUN chmod +x /root/entry.sh
 # Set timezone
 ENV TZ="Europe/Berlin"
 
+# Create backup folder
+RUN mkdir /backup
+
 # Run the cron daemon when the container starts
 CMD ["/root/entry.sh"]
