@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Build script for this container
 
 # Version:	1
@@ -8,7 +8,7 @@
 # Changelog:
 # 2020-09-18: Initial Creation
 
-# ToDo: 
+# ToDo:
 
 # Current Version of the repository
 version=v0.4
