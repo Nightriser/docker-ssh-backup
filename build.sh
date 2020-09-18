@@ -11,7 +11,7 @@
 # ToDo: 
 
 # Current Version of the repository
-version=v0.5
+version=v0.6
 
 # Change directory to the freshly downloaded Repository
 cd ./docker-ssh-backup

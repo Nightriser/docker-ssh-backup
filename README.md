@@ -14,7 +14,7 @@ The Backup will be created daily.
 
 Clone this repository
 
-	git clone https://github.com/Nightriser/docker-ssh-backup
+	git clone https://github.com/Nightriser/docker-ssh-backup -b 0.6
 
 Create the container
 
@@ -25,7 +25,7 @@ Run the container
 	docker run -dit \
 	--name backup \
 	-v /path/to/folder:/backup \
-	nightriser/ssh-backup:v0.5
+	nightriser/ssh-backup:v0.6
 
 > Replace `/path/to/folder` with the path to the folder you want the backups to end up in.
 > Change the container name if you want to
@@ -56,3 +56,7 @@ Changed: ReadMe, build.sh
 #### 2020-09-18: v0.5
 Updated: ReadMe
 Changed: ReadMe, Dockerfile, build.sh
+Added: entry.sh
+
+#### 2020-09-18: v0.6
+Updated: ReadMe, build.sh, Dockerfile
