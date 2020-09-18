@@ -42,10 +42,10 @@ echo "Copying the ssh-key to the remote machine. You will be prompted for a pass
 # Echo all the variables to the configuration file
 echo "Writing variables to configuration file /root/backup.conf"
 echo hostip="$hostip" > /root/backup.conf
-echo user="$user" > /root/backup.conf
-echo sshport="$sshport" > /root/backup.conf
-echo sourcedevice="$sourcedevice" > /root/backup.conf
-echo compression="$compression" > /root/backup.conf
+echo user="$user" >> /root/backup.conf
+echo sshport="$sshport" >> /root/backup.conf
+echo sourcedevice="$sourcedevice" >> /root/backup.conf
+echo compression="$compression" >> /root/backup.conf
 
 # Create the cronjob
 echo "Creating the cronjob"
