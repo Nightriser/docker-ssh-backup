@@ -24,4 +24,4 @@ ADD ./backup.sh /root/
 RUN chmod +x /root/backup.sh
 
 # Run the cron daemon when the container starts
-CMD ["crond" "-f" "-l" "8"]
+CMD [ "crond" "-f" "-l" "8" ]
