@@ -13,8 +13,8 @@
 # Always use most recent alpine image ;)
 FROM alpine:latest
 
-# Update package lists and download openssh-client and tzdata
-RUN apk update && apk upgrade && apk add --no-cache openssh-client tzdata
+# Update package lists and download openssh-client, tzdata and pigz
+RUN apk update && apk upgrade && apk add --no-cache openssh-client tzdata pigz
 
 # Add the init.sh script to the container and make it executable
 ADD ./init.sh /root/
