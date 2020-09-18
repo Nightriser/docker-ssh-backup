@@ -11,14 +11,7 @@
 # ToDo: 
 
 # Current Version of the repository
-<<<<<<< Updated upstream
-version=v0.1
-
-# Clone the Repository
-git clone https://github.com/Nightriser/docker-ssh-backup
-=======
-version=v0.3
->>>>>>> Stashed changes
+version=v0.4
 
 # Change directory to the freshly downloaded Repository
 cd ./docker-ssh-backup
