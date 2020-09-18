@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Build script for this container
 
 # Version:	1
@@ -8,10 +8,10 @@
 # Changelog:
 # 2020-09-18: Initial Creation
 
-# ToDo: 
+# ToDo:
 
 # Current Version of the repository
-version=v0.1
+version=v0.2
 
 # Clone the Repository
 git clone https://github.com/Nightriser/docker-ssh-backup

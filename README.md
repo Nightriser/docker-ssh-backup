@@ -9,6 +9,8 @@ This will backup a UNIX/Linux machine or anything with a ssh-server, dd and root
 
 The Backup will be created daily.
 
+This is only tested on Ubuntu 20.04.1 LTS on a RaspberryPi 4 as the docker-host and backup-target.
+
 
 ## Installation
 
