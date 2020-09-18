@@ -23,5 +23,10 @@ RUN chmod +x /root/init.sh
 ADD ./backup.sh /root/
 RUN chmod +x /root/backup.sh
 
+# Add the entry.sh script to the container and make it executable
+ADD ./entry.sh /root/
+RUN chmod +x /root/entry.sh
+
+
 # Run the cron daemon when the container starts
-CMD [ "crond -f -l 8" ]
+CMD ["/root/entry.sh"]
