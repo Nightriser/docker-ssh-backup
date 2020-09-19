@@ -22,4 +22,4 @@ filename=`date "+%F"`".img.gz"
 destination=/backup
 
 # Create the backup with the sourced variables
-/usr/bin/ssh -p "$ssh-port" "$user"@"$hostip" sudo dd if="$sourcedevice" bs=4M | /usr/bin/pigz -"$compression" > "$destination"/"$filename"
+/usr/bin/ssh -p "$sshport" "$user"@"$hostip" sudo dd if="$sourcedevice" bs=4M | /usr/bin/pigz -"$compression" > "$destination"/"$filename"

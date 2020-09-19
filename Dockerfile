@@ -6,14 +6,15 @@
 
 # Changelog:
 # 2020-09-18: Initial Creation
+# 2020-09-18: Added timezone environment variable
 
 
 
 # Always use most recent alpine image ;)
 FROM alpine:latest
 
-# Update package lists and download openssh-client
-RUN apk update && apk upgrade && apk add --no-cache openssh-client
+# Update package lists and download openssh-client, tzdata and pigz
+RUN apk update && apk upgrade && apk add --no-cache openssh-client tzdata pigz
 
 # Add the init.sh script to the container and make it executable
 ADD ./init.sh /root/
@@ -23,5 +24,15 @@ RUN chmod +x /root/init.sh
 ADD ./backup.sh /root/
 RUN chmod +x /root/backup.sh
 
+# Add the entry.sh script to the container and make it executable
+ADD ./entry.sh /root/
+RUN chmod +x /root/entry.sh
+
+# Set timezone
+ENV TZ="Europe/Berlin"
+
+# Create backup folder
+RUN mkdir /backup
+
 # Run the cron daemon when the container starts
-CMD ["/usr/sbin/crond -f -l 8"]
+CMD ["/root/entry.sh"]

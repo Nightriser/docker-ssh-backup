@@ -27,7 +27,7 @@ read hostip
 echo "Enter username of a user with ssh and sudo rights: "
 read user
 echo "Enter SSH-Port: "
-read ssh-port
+read sshport
 echo "Enter remote device to backup: "
 read sourcedevice
 echo "Enter pigz compression level (4 recommended): "
@@ -42,10 +42,10 @@ echo "Copying the ssh-key to the remote machine. You will be prompted for a pass
 # Echo all the variables to the configuration file
 echo "Writing variables to configuration file /root/backup.conf"
 echo hostip="$hostip" > /root/backup.conf
-echo user="$user" > /root/backup.conf
-echo ssh-port="$ssh-port" > /root/backup.conf
-echo sourcedevice="$sourcedevice" > /root/backup.conf
-echo compression="$compression" > /root/backup.conf
+echo user="$user" >> /root/backup.conf
+echo sshport="$sshport" >> /root/backup.conf
+echo sourcedevice="$sourcedevice" >> /root/backup.conf
+echo compression="$compression" >> /root/backup.conf
 
 # Create the cronjob
 echo "Creating the cronjob"
